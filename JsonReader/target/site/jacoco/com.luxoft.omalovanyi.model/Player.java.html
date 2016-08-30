@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Player.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">jsonreader</a> &gt; <a href="index.source.html" class="el_package">com.luxoft.omalovanyi.model</a> &gt; <span class="el_source">Player.java</span></div><h1>Player.java</h1><pre class="source lang-java linenums">package com.luxoft.omalovanyi.model;
+
+import com.google.gson.annotations.SerializedName;
+import com.luxoft.omalovanyi.util.Utility;
+
+import java.text.ParseException;
+
+
+/**
+ * Created by maoleks on 6/10/2016.
+ */
+
+<span class="fc" id="L13">public class Player implements Comparable&lt;Player&gt; {</span>
+
+    private String name;
+    @SerializedName(&quot;bio&quot;)
+    private String biography;
+    @SerializedName(&quot;photo done?&quot;)
+    private String photoInclude;
+    @SerializedName(&quot;special player? (eg. key player, promising talent, etc)&quot;)
+    private String specialPlayer;
+    private String position;
+    private String number;
+    private String caps;
+    @SerializedName(&quot;goals for country&quot;)
+    private String countGoals;
+    private String club;
+    private String league;
+    @SerializedName(&quot;date of birth&quot;)
+    private String dateBirthday;
+    @SerializedName(&quot;&quot;)
+    private String empty;
+    private String rating_match1;
+    private String rating_match2;
+    private String rating_match3;
+
+    public String getRating_match3() {
+<span class="fc" id="L38">        return rating_match3;</span>
+    }
+
+    public void setRating_match3(String rating_match3) {
+<span class="fc" id="L42">        this.rating_match3 = rating_match3;</span>
+<span class="fc" id="L43">    }</span>
+
+    public String getBiography() {
+<span class="fc" id="L46">        return biography;</span>
+    }
+
+    public void setBiography(String biography) {
+<span class="fc" id="L50">        this.biography = biography;</span>
+<span class="fc" id="L51">    }</span>
+
+    public String getPhotoInclude() {
+<span class="fc" id="L54">        return photoInclude;</span>
+    }
+
+    public void setPhotoInclude(String photoInclude) {
+<span class="fc" id="L58">        this.photoInclude = photoInclude;</span>
+<span class="fc" id="L59">    }</span>
+
+    public String getSpecialPlayer() {
+<span class="fc" id="L62">        return specialPlayer;</span>
+    }
+
+    public void setSpecialPlayer(String specialPlayer) {
+<span class="fc" id="L66">        this.specialPlayer = specialPlayer;</span>
+<span class="fc" id="L67">    }</span>
+
+    public String getPosition() {
+<span class="fc" id="L70">        return position;</span>
+    }
+
+    public void setPosition(String position) {
+<span class="fc" id="L74">        this.position = position;</span>
+<span class="fc" id="L75">    }</span>
+
+    public String getNumber() {
+
+<span class="pc bpc" id="L79" title="1 of 2 branches missed.">        if (&quot;&quot;.equals(number)) {</span>
+<span class="nc" id="L80">            number = &quot;0&quot;;</span>
+        }
+
+<span class="fc" id="L83">        return number;</span>
+    }
+
+    public void setNumber(String number) {
+<span class="fc" id="L87">        this.number = number;</span>
+<span class="fc" id="L88">    }</span>
+
+    public String getCaps() {
+<span class="pc bpc" id="L91" title="1 of 2 branches missed.">        if (&quot;&quot;.equals(caps)) {</span>
+<span class="nc" id="L92">            caps = &quot;0&quot;;</span>
+        }
+<span class="fc" id="L94">        return caps;</span>
+    }
+
+    public void setCaps(String caps) {
+<span class="fc" id="L98">        this.caps = caps;</span>
+<span class="fc" id="L99">    }</span>
+
+    public String getCountGoals() {
+
+<span class="pc bpc" id="L103" title="1 of 2 branches missed.">        if (&quot;&quot;.equals(countGoals)) {</span>
+<span class="nc" id="L104">            caps = &quot;0&quot;;</span>
+        }
+<span class="fc" id="L106">        return countGoals;</span>
+    }
+
+    public void setCountGoals(String countGoals) {
+<span class="fc" id="L110">        this.countGoals = countGoals;</span>
+<span class="fc" id="L111">    }</span>
+
+    public String getClub() {
+<span class="fc" id="L114">        return club;</span>
+    }
+
+    public void setClub(String club) {
+<span class="fc" id="L118">        this.club = club;</span>
+<span class="fc" id="L119">    }</span>
+
+    public String getLeague() {
+<span class="fc" id="L122">        return league;</span>
+    }
+
+    public void setLeague(String league) {
+<span class="fc" id="L126">        this.league = league;</span>
+<span class="fc" id="L127">    }</span>
+
+    public String getDateBirthday() {
+<span class="fc" id="L130">        return dateBirthday;</span>
+    }
+
+    public void setDateBirthday(String dateBirthday) {
+<span class="fc" id="L134">        this.dateBirthday = dateBirthday;</span>
+<span class="fc" id="L135">    }</span>
+
+    public String getEmpty() {
+<span class="fc" id="L138">        return empty;</span>
+    }
+
+    public void setEmpty(String empty) {
+<span class="nc" id="L142">        this.empty = empty;</span>
+<span class="nc" id="L143">    }</span>
+
+    public String getRating_match1() {
+<span class="fc" id="L146">        return rating_match1;</span>
+    }
+
+    public void setRating_match1(String rating_match1) {
+<span class="fc" id="L150">        this.rating_match1 = rating_match1;</span>
+<span class="fc" id="L151">    }</span>
+
+    public String getRating_match2() {
+<span class="fc" id="L154">        return rating_match2;</span>
+    }
+
+    public void setRating_match2(String rating_match2) {
+<span class="fc" id="L158">        this.rating_match2 = rating_match2;</span>
+<span class="fc" id="L159">    }</span>
+
+    public String getName() {
+<span class="fc" id="L162">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="fc" id="L166">        this.name = name;</span>
+<span class="fc" id="L167">    }</span>
+
+    @Override
+    public boolean equals(Object o) {
+<span class="pc bpc" id="L171" title="1 of 2 branches missed.">        if (this == o) return true;</span>
+<span class="pc bpc" id="L172" title="2 of 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
+
+<span class="fc" id="L174">        Player player = (Player) o;</span>
+
+<span class="pc bpc" id="L176" title="4 of 6 branches missed.">        if (getName() != null ? !getName().equals(player.getName()) : player.getName() != null) return false;</span>
+<span class="pc bpc" id="L177" title="4 of 6 branches missed.">        if (getBiography() != null ? !getBiography().equals(player.getBiography()) : player.getBiography() != null)</span>
+<span class="nc" id="L178">            return false;</span>
+<span class="pc bpc" id="L179" title="4 of 6 branches missed.">        if (getPhotoInclude() != null ? !getPhotoInclude().equals(player.getPhotoInclude()) : player.getPhotoInclude() != null)</span>
+<span class="nc" id="L180">            return false;</span>
+<span class="pc bpc" id="L181" title="4 of 6 branches missed.">        if (getSpecialPlayer() != null ? !getSpecialPlayer().equals(player.getSpecialPlayer()) : player.getSpecialPlayer() != null)</span>
+<span class="nc" id="L182">            return false;</span>
+<span class="pc bpc" id="L183" title="4 of 6 branches missed.">        if (getPosition() != null ? !getPosition().equals(player.getPosition()) : player.getPosition() != null)</span>
+<span class="nc" id="L184">            return false;</span>
+<span class="pc bpc" id="L185" title="4 of 6 branches missed.">        if (getNumber() != null ? !getNumber().equals(player.getNumber()) : player.getNumber() != null) return false;</span>
+<span class="pc bpc" id="L186" title="4 of 6 branches missed.">        if (getCaps() != null ? !getCaps().equals(player.getCaps()) : player.getCaps() != null) return false;</span>
+<span class="pc bpc" id="L187" title="4 of 6 branches missed.">        if (getCountGoals() != null ? !getCountGoals().equals(player.getCountGoals()) : player.getCountGoals() != null)</span>
+<span class="nc" id="L188">            return false;</span>
+<span class="pc bpc" id="L189" title="4 of 6 branches missed.">        if (getClub() != null ? !getClub().equals(player.getClub()) : player.getClub() != null) return false;</span>
+<span class="pc bpc" id="L190" title="4 of 6 branches missed.">        if (getLeague() != null ? !getLeague().equals(player.getLeague()) : player.getLeague() != null) return false;</span>
+<span class="pc bpc" id="L191" title="4 of 6 branches missed.">        if (getDateBirthday() != null ? !getDateBirthday().equals(player.getDateBirthday()) : player.getDateBirthday() != null)</span>
+<span class="nc" id="L192">            return false;</span>
+<span class="pc bpc" id="L193" title="4 of 6 branches missed.">        if (getEmpty() != null ? !getEmpty().equals(player.getEmpty()) : player.getEmpty() != null) return false;</span>
+<span class="pc bpc" id="L194" title="4 of 6 branches missed.">        if (getRating_match1() != null ? !getRating_match1().equals(player.getRating_match1()) : player.getRating_match1() != null)</span>
+<span class="nc" id="L195">            return false;</span>
+<span class="pc bpc" id="L196" title="4 of 6 branches missed.">        if (getRating_match2() != null ? !getRating_match2().equals(player.getRating_match2()) : player.getRating_match2() != null)</span>
+<span class="nc" id="L197">            return false;</span>
+<span class="pc bpc" id="L198" title="4 of 6 branches missed.">        return !(getRating_match3() != null ? !getRating_match3().equals(player.getRating_match3()) : player.getRating_match3() != null);</span>
+
+    }
+
+
+    @Override
+    public String toString() {
+<span class="nc" id="L205">        return &quot;Player{&quot; +</span>
+                &quot;name='&quot; + name + '\'' +
+                &quot;, position='&quot; + position + '\'' +
+                &quot;, club='&quot; + club + '\'' +
+                &quot;, league='&quot; + league + '\'' +
+                &quot;, dateBirthday='&quot; + dateBirthday + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Player player){
+<span class="nc" id="L216">           return -1*Utility.stringToDate(this.getDateBirthday()).compareTo(Utility.stringToDate(player.getDateBirthday()));</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

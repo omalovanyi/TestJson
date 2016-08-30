@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+
+    <context:property-placeholder location="classpath:input.properties,
+                                            classpath:database.properties"/>
+
+    <context:component-scan base-package="com.luxoft.omalovanyi"/>
+    <context:annotation-config/>
+    <aop:aspectj-autoproxy />
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="${driverClassNameDB}" />
+        <property name="url" value="${urlDB}"/>
+        <property name="username" value="${userDB}"/>
+        <property name="password" value="${pwdDB}"/>
+        <property name="defaultAutoCommit" value="false" />
+        <property name="initialSize" value="3" />
+    </bean>
+
+
+</beans>

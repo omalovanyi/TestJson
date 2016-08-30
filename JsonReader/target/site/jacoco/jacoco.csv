@@ -1,0 +1,16 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+jsonreader,com.luxoft.omalovanyi.aop.logging,TimeLogger,102,7,8,0,17,2,6,2,2,2
+jsonreader,com.luxoft.omalovanyi.model,JsonFile,4,6,0,0,2,2,1,2,1,2
+jsonreader,com.luxoft.omalovanyi.model,Sheet,4,6,0,0,2,2,1,2,1,2
+jsonreader,com.luxoft.omalovanyi.model,Player,170,258,66,36,15,65,54,31,3,31
+jsonreader,com.luxoft.omalovanyi.reader,JsonReader,98,59,4,2,17,16,5,4,2,4
+jsonreader,com.luxoft.omalovanyi.reader,FolderReader,3,22,1,1,0,3,1,2,0,2
+jsonreader,com.luxoft.omalovanyi.reader,JsonReaderException,9,0,0,0,4,0,2,0,2,0
+jsonreader,com.luxoft.omalovanyi.reader,FolderReader.new FilenameFilter() {...},0,32,1,3,0,2,1,3,0,2
+jsonreader,com.luxoft.omalovanyi.reader,JsonReader.new Callable() {...},141,0,4,0,18,0,4,0,2,0
+jsonreader,com.luxoft.omalovanyi.parser,JsonFileParser,0,13,0,0,0,3,0,2,0,2
+jsonreader,com.luxoft.omalovanyi.dao.impl,PlayerDAOImpl.PlayerRowMapper,0,83,0,0,0,17,0,2,0,2
+jsonreader,com.luxoft.omalovanyi.dao.impl,PlayerDAOImpl,0,137,0,2,0,18,0,6,0,5
+jsonreader,com.luxoft.omalovanyi.main,MainProcess,4,19,0,0,2,6,1,2,1,2
+jsonreader,com.luxoft.omalovanyi.main,StartProcess,44,0,0,0,13,0,3,0,3,0
+jsonreader,com.luxoft.omalovanyi.util,Utility,18,20,0,0,4,8,1,4,1,4
