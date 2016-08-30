@@ -1,2 +1,1 @@
-# TestJson
-!https://travis-ci.org/omalovanyi/TestJson.svg?branch=master!:https://travis-ci.org/omalovanyi/TestJson
+# TestJson [![Build Status](https://travis-ci.org/omalovanyi/TestJson.svg?branch=master)](https://travis-ci.org/omalovanyi/TestJson)
