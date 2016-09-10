@@ -31,7 +31,7 @@ public class PlayerDAOTest {
     private List<Player> listPlayers = new ArrayList<>();
     private Player player = new Player();
 
-    private JdbcTemplate2 jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
 
     @Autowired
     public void setDataSource(DataSource dataSource) {
